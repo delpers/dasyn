@@ -1,4 +1,4 @@
-// CIVIL + BÊTA (INTERNET PROTECTION) FIREFOX EXTENSION
+// CIVIL + BÊTA (INTERNET PROTECTION) FIREFOX
 
 let loadPages = (() => {
   var ref = _asyncToGenerator(function* () {
@@ -19,10 +19,11 @@ let loadPages = (() => {
 
 // blocking of unauthorized websites.
 // when a site is blocked, it returns a page on the subject.
+// https://api.npoint.io/5fa8e0df3fbcb6b55740
 
 let getBlockedRedirect = (() => {
   var ref = _asyncToGenerator(function* () {
-    let response = yield fetch("https://api.npoint.io/5fa8e0df3fbcb6b55740");
+    let response = yield fetch("https://api.npoint.io/*");
     let data = yield response.json();
     return data;
   });
@@ -34,10 +35,11 @@ let getBlockedRedirect = (() => {
 
 // list of authorizations of authorized domains.
 // related to keyword blocked in domain names. (related getBlockedHostKeyWords).
+// https://api.npoint.io/fb199a54e9b7c6a95050
 
 let getAllowedWebSite = (() => {
   var ref = _asyncToGenerator(function* () {
-    let response = yield fetch("https://api.npoint.io/fb199a54e9b7c6a95050");
+    let response = yield fetch("https://api.npoint.io/*");
     let data = yield response.json();
     return data;
   });
@@ -49,10 +51,11 @@ let getAllowedWebSite = (() => {
 
 // keyword blocked in domain names.
 // when a domain keyword is blocked, it is not blocked on an authorized site.
+// https://api.npoint.io/390e89080b29c06dd46a
 
 let getBlockedHostKeyWords = (() => {
   var ref = _asyncToGenerator(function* () {
-    let response = yield fetch("https://api.npoint.io/390e89080b29c06dd46a");
+    let response = yield fetch("https://api.npoint.io/*");
     let data = yield response.json();
     return data;
   });
@@ -64,10 +67,11 @@ let getBlockedHostKeyWords = (() => {
 
 // reading of key words blocked in slugs. (related getAllowedWebSite).
 // when a slug is blocked it is not blocked on an authorized site.
+// https://api.npoint.io/dee0c68555d63116ae30
 
 let getBlockedSlugKeyWords = (() => {
   var ref = _asyncToGenerator(function* () {
-    let response = yield fetch("https://api.npoint.io/dee0c68555d63116ae30");
+    let response = yield fetch("https://api.npoint.io/*");
     let data = yield response.json();
     return data;
   });
